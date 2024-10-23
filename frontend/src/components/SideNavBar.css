@@ -1,0 +1,39 @@
+/* SideNavBar.css */
+.side-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    z-index: 1000;
+    background-color: white;
+    transition: width 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.247); /* Optional: Add a subtle shadow for depth */
+  }
+
+  .side-nav-bar.expanded {
+    width: 240px;
+  }
+  
+  .side-nav-bar.collapsed {
+    width: 56px;
+  }
+  
+  .logo-container {
+    padding: 20px; /* Adjust as needed */
+    background-color: #ffffff; /* Set the background color for the logo container */
+    text-align: center;
+  }
+  
+  .expanded-logo {
+    width: 160px; /* Set the width of your logo */
+    height: auto;
+    transition: width 0.3s ease; /* Add a transition to the width property */
+  }
+
+  .collapsed-logo {
+    width: 48px; /* Set the width of your logo */
+    height: auto;
+    margin-left: -10px;
+  }
+  

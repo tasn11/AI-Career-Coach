@@ -1,0 +1,800 @@
+* {
+  font-family: Trebuchet MS;
+  font-size: 1rem;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AppWrapper {
+  display: flex;
+  background-color: #f1d7df;
+  height: 96vh;
+  padding: 20px;
+}
+
+.Container {
+  flex: 1;
+  background-color: #f8f3f3;
+  padding: 20px;
+  position: relative;
+  margin-left: 15px;
+}
+
+.QuestionBox {
+
+}
+
+.QuestionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fceaef;
+  --r: 25px; /* the radius */
+  --t: 30px; /* the size of the tail */
+  -webkit-mask: 
+    radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+      var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+    conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+      calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+    radial-gradient(50% 50%,#000 98%,#0000 101%) 
+      0 0/var(--r) var(--r) space padding-box;
+  background: linear-gradient(135deg,#c07d99,#ffbca2) border-box;
+  color: #fff;
+  --_d: 0%;
+  border-left: var(--t) solid #0000;
+  margin-right: var(--t);
+  place-self: start;
+}
+
+.Question {
+  font-weight: bold;
+  padding: 25px;
+  text-align: left;
+}
+
+.Invisible {
+  opacity: 0%;
+  position: absolute;
+}
+
+.QuestionHeader {
+  font-size: 1.5rem;
+  margin-bottom: 1px;
+  font-weight:lighter;
+  opacity: 80%;
+}
+
+.RecorderBox {
+  flex: 1;
+  background-color: #f8f3f3;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  background-color: #fff;
+  border: 2px solid #d096a3;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.ButtonsContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.Button {
+  padding: 10px;
+  background-color: #f58ea8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.EndSession {
+  background-color: #ad3652;
+}
+
+.EndSession:hover {
+  background-color: rgb(87, 17, 33);
+}
+
+.Button:hover {
+  background-color: #d96b85;
+}
+
+.Button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.Timer {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.conversation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.question {
+  font-weight: bold;
+  padding: 25px;
+  padding-top: 0;
+  font-size: 1.5rem;
+}
+
+.question-container {
+  text-align: center;
+}
+
+.library-header1 {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-left: 45px;
+  padding-top: 5px;
+}
+
+.library-header1:after {
+  content: '';
+  display: block;
+  height: 3px; /* Adjust the height of the line */
+  width: 90%;
+  background-color: #eeade3; /* Set the color of the line */
+  position: absolute;
+  left: 10;
+}
+
+.Question {
+  font-size: 1.1rem;;
+  color: #ffffff;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option {
+  background-color: white;
+  font-size: 1.1rem;
+  padding: 15px;
+  border: 2px solid #eecbe9;
+  border-radius: 30px; /* More rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+}
+
+.option:hover {
+  background-color: #eecbe9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.option:active {
+  background-color: #c0c0c0;
+}
+
+.custom-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-text-input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.next-button {
+  background-color: #da87ae;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #c06992;
+}
+
+.DisplayedTextContainer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 16px;
+  border: 1px solid #ddd;
+  transform: translate(0,100%);
+	transition: all 450ms cubic-bezier(0.32,1,0.23,1) 100ms;
+  max-height: none; /* Allows the content to expand to its natural height */
+  overflow: auto;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.22), 0px 14px 56px rgba(0, 0, 0, 0.25);
+  height: 280px;
+}
+
+.DisplayedTextContainer.show {
+  transform: translateY(0);
+}
+
+
+.DisplayedTextContainer.minimized {
+  max-height: 40px; /* Adjust the minimized height as needed */
+  transition: transform 0.5s ease-in-out; /* Add transition only when minimized */
+  transform: translate3d(0, 10%, 0); /* Use translate3d for GPU acceleration */
+}
+
+.BottomSheetHeader {
+  align-items: center; /* Center items vertically */
+}
+
+.BottomSheetToggle {
+  cursor: pointer;
+  background-color: #eeeeee00;
+  padding: 8px;
+  border: none;
+  color: rgb(190, 87, 105); /* Set the color to pink */
+  font-size: 20px; /* Set the font size to make the arrows bigger */
+  transition: color 0.3s ease; /* Add color transition */
+}
+
+.BottomSheetContent {
+  overflow-y: auto;
+}
+
+.BottomSheetClose {
+  display: none; /* Hide the close button by default */
+  transition: color 0.3s ease-in-out; /* Add color transition */
+}
+
+.DisplayedTextContainer.minimized .BottomSheetContent,
+.DisplayedTextContainer.minimized .BottomSheetClose {
+  display: none; /* Hide content and close button when minimized */
+}
+
+.ReportBox {
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.ReportRow {
+  display: flex;
+}
+
+.ReportCategory {
+  flex: 1;
+  color: rgb(100, 90, 102);
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #facde2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+  border-radius: 15px;
+}
+
+.ReportCategory:hover {
+  background-color: #eca7c7; /* Change the background color on hover */
+}
+
+.ReportCell {
+  text-align: center; /* Optional: Center-align cell content */
+  font-size: 1.05rem;
+}
+
+.PinkTitle {
+  color: rgb(190, 87, 105);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.OpenAiContainer {
+  margin-top: 10px;
+}
+
+.Recommendation {
+  text-align: left;
+  border-radius: 15px;
+  border: 1px solid #b6b6b6;
+  margin-top: 15px;
+}
+
+.RecommendationTitle {
+  color: rgb(190, 87, 105);
+  font-size: 1.2rem;
+  padding: 5px;
+  padding-bottom: 0px;
+  padding-top: 15px;
+}
+
+.RecommendationContent {
+  padding: 5px;
+  padding-top: 0px;
+}
+
+.TranscribedText {
+  margin-top: 30px;
+  width: 90%;
+  margin: 0 auto; /* Center the box horizontally */
+  background-color: white;
+  border-radius: 8px; /* Adjust the value to change the roundness of the corners */
+  padding: 10px; /* Add padding to give some space inside the box */
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.473); /* Optional: Add a subtle shadow for depth */
+}
+
+.Transcript {
+  color: rgb(158, 129, 134);
+  font-size: 1.1rem;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  text-align: left;
+  padding-left: 25px;
+  padding-bottom: 5px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  padding-top: 20px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #be99c5;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+}
+
+.popup-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  animation: pop 1s ease-in-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.popup-content {
+  margin-bottom: 10px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content:center;
+}
+
+.SaveCancel {
+  margin: 20px;
+  font-size: 1.1rem;
+}
+
+/* Library.css */
+.library-wrapper {
+  padding: 30px;
+  padding-left: 50px;
+}
+
+.library-header {
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.library-header:after {
+  content: '';
+  display: block;
+  height: 3px; /* Adjust the height of the line */
+  width: 90%;
+  background-color: #eeade3; /* Set the color of the line */
+  position: absolute;
+  left: 10;
+}
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-item {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  width: 320px; /* Set a fixed width or adjust as needed */
+  cursor: pointer;
+}
+
+.video-item:hover {
+  background-color: #f9f9f9; /* Change the background color on hover */
+}
+
+.video-thumbnail {
+  width: 100px; /* Adjust the width of the thumbnail as needed */
+  height: 100px; /* Adjust the height of the thumbnail as needed */
+  object-fit: cover;
+}
+
+.video-details {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.video-title {
+  font-weight: bold;
+}
+
+.video-date {
+  color: #888;
+}
+
+header {
+  padding-top: 0;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0px;
+  top: 0;
+  margin-top: -10%;
+}
+
+.LogoImage {
+  width: 400px;
+}
+
+.practiceButton {
+  margin-left: 30px;
+  background: linear-gradient(-45deg, #eec160, #e478a2, #ec297b, #ebcb62);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 140px;
+  height: 65px;
+  font-size: 1.2rem;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.boxesContainer {
+  margin-left: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center; /* Center the boxes horizontally */
+
+}
+
+.box {
+  background-color: #ffffff;
+  border: 2px solid #d6ced071;
+  padding: 10px; /* Adjusted padding to make the boxes smaller */
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.233); /* Shadow effect on hover */
+  transition: box-shadow 0.3s ease; /* Added transition for smooth effect */
+  width: 90%;
+}
+
+.box:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on hover */
+}
+
+.box img {
+  max-width: 100px; /* Ensure images don't overflow the boxes */
+  max-height: 100%;
+  border-radius: 5px; /* Optional: Add border-radius to images */
+}
+
+.StrengthsHeader {
+  background-color: #ed297b7e;
+  padding: 10px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column; /* Change the flex direction to column */
+  align-items: center;
+  line-height: 1; /* Center the text vertically */
+}
+
+.plusButton {
+  background-color: #ed297b7e;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 25%;
+  font-size: 3rem;
+  margin-top: 10px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.StrengthsText {
+  text-align: center;
+  color: white;
+}
+
+.CenteredButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.ContainerStrengths{
+  background-color: #ed297b25;
+  width: 60%;
+  margin: 0 auto; /* Center horizontally */
+  border: 1px solid #e7b6c0;
+  margin-top: -3%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.37); /* Shadow effect on hover */
+}
+
+.Table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  margin: 10px 0;
+  position: relative;
+  color: rgba(51, 51, 51, 0.877)
+}
+
+li:before {
+  content: "•"; /* Use a fancy bullet point */
+  color: rgb(131, 21, 103); /* Adjust the color of the bullet point */
+  font-size: 1.2rem; /* Adjust the size of the bullet point */
+  position: absolute;
+  left: -20px; /* Adjust the distance from the text */
+}
+
+.pageHeader {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  padding-left: 45px;
+  color: #d183a1;
+  font-weight: 700;
+}
